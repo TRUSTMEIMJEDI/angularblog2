@@ -35,7 +35,7 @@ export class ContactComponent implements OnInit {
    */
   processForm() {
     if (this.captcha !== this.captcha1) {
-      alert('Captcha is not correct.\nPlease write captcha correctly\nRemember to use CAPITOL & small letters');
+      alert('Captcha is not correct.\nPlease write captcha correctly\nRemember to use CAPITAL & small letters');
     } else {
       const allInfo = `My name is ${this.name}.\nMy email is ${this.email}.\nMy phone nubmer is ${this.number}.\nMy message is ${this.message}`;
       alert(allInfo);
