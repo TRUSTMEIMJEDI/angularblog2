@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <span>
+  <ul>
+      <li><a mat-button routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a mat-button routerLink="/" routerLinkActive="active">My blog</a></li>
+      <li><a mat-button routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a mat-button routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      <li><a mat-button href="https://www.instagram.com/twinsssss/" target="_blank">
+        <i class="fa fa-instagram"></i>
+      </a></li>
+      <li><a mat-button href="https://www.youtube.com/channel/UCiXEsEzSkOnoZO6Roqs5t2A?view_as=subscriber"
+         target="_blank">
+        <i class="fa fa-youtube-play"></i>
+      </a></li>
+      <li><a mat-button href="https://www.facebook.com/sull123" target="_blank">
+        <i class="fa fa-facebook-square"></i>
+      </a></li>
+  </ul>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/login" routerLinkActive="mat-accent">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/signup" routerLinkActive="mat-accent">Signup</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>
+
+
+
